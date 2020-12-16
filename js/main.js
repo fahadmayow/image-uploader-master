@@ -24,7 +24,7 @@ if(fileSelector.length > 0)
 				container.innerHTML = `
 
 					<div id="loader" class="loader">
-						<h2 class="loader__title">Uplading...</h2>
+						<h2 class="loader__title">Uploading...</h2>
 						<div class="loader__animation">
 							<span class="loader__animation__snake"></span>
 						</div>
