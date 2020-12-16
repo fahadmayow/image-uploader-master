@@ -1,0 +1,273 @@
+/*
+	* author		  => Fahad Mayow
+	* project type    => PHP
+	* project for     => DevChallenges
+	* start date   	  => 14 December 2020
+	* end date        => 16 December 2020
+	* hours		      => 2.5h/day
+*/
+
+/* -- fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* -- basic tags -- */
+body
+{
+	margin: 0;
+	padding: 0;
+	top: 0;
+	font-family: 'Poppins', sans-serif;
+	background-color: #FAFAFB;
+}
+*
+{
+	text-decoration: none;
+	box-sizing: border-box;
+}
+a
+{
+	color: #2F80ED;
+}
+/* -- container -- */
+.container
+{
+	width: 402px;	
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	text-align: center;
+}
+/* -- upload form style -- */
+.container .form
+{
+	width: 100%;
+	height: 496px;
+	overflow: hidden;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	background-color: #FFFFFF;
+	border-radius: 12px;
+	padding: 21px;
+}
+.container .form .form__header
+{
+	overflow: hidden;
+	margin-bottom: 21px;
+}
+.container .form .form__header .form__header__title
+{
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 27px;
+	color: #4F4F4F;
+}
+.container .form .form__header .form__header__tagline
+{
+	line-height: 15px;
+	font-size: 10px;
+	color: #828282;
+}
+.container .form .form__body
+{
+	overflow: hidden;
+	padding: 12px;
+	padding-top: 0px;
+}
+.container .form .form__body .form__body__item .form__body__item__dragBox
+{
+	height: 219px;
+	width: 100%;
+	border: 1px dashed #97BEF4;
+	border-radius: 12px;
+	background: #F6F8FB;
+	padding: 31px;
+	overflow: hidden;
+	position: relative;
+}
+.container .form .form__body .form__body__item .form__body__item__selector
+{
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+}
+.container .form .form__body .form__body__item span
+{
+	display: block;
+	color: #BDBDBD;
+	font-size: 12px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+.container .form .form__body .form__body__item .form__body__item__dragBox input,
+.container .form .form__body .form__body__item .form__body__item__selector input
+{
+	opacity: 0;
+	width: 100%;
+	height: 170%;
+	position: absolute;
+	top: -25px;
+	left: 0px;
+	cursor: pointer;
+}
+.container .btn-main
+{
+	background-color: #2F80ED;
+	border: 0;
+	outline: 0;
+	border-radius: 8px;
+	font-size: 12px;
+	padding: 12px 18px;
+	color: #FFFFFF;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.container .btn-main:hover
+{
+	background-color: #2864b4;
+}
+/* -- upload view style -- */
+.container .view
+{
+	width: 100%;
+	min-height: 154px;
+	overflow: hidden;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	background-color: #FFFFFF;
+	border-radius: 12px;
+	padding: 31px;
+}
+.container .view .view__header
+{
+	overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+.container .view .view__header i
+{
+	color: #219653;
+	font-size: 41px;
+}
+.container .view .view__header .view__header__title
+{
+	font-size: 18px;
+	color: #4F4F4F;
+	font-weight: 500;
+}
+.container .view .view__uploaded
+{
+	width: 100%;
+	overflow: hidden;
+	border-radius: 12px;
+	margin-bottom: 12px;
+}
+.container .view .view__uploaded img
+{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	border-radius: 12px;
+}
+.container .view .view__link
+{
+	background-color: #F6F8FB;
+	border: 1px solid #E0E0E0;
+	width: 100%;
+	height: 34px;
+	border-radius: 8px;
+	padding: 0px;
+}
+.container .view .view__link input
+{
+	border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: calc(100% - 88px);
+    font-size: 8px;
+    float: left;
+    padding: 12px 5px;
+}
+.container .view .view__link .btn-main
+{
+	float: right;
+    padding: 11px 20px;
+    font-size: 8px;
+    margin-top: 0.7px;
+    margin-right: 0.7px;
+}
+/* -- upload loader style -- */
+.container .loader
+{
+	width: 100%;
+	height: 143px;
+	overflow: hidden;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	background-color: #FFFFFF;
+	border-radius: 12px;
+	padding: 31px;
+	text-align: left;
+}
+.container .loader .loader__title
+{
+	color: #4F4F4F;
+	font-size: 18px;
+	font-weight: 500;
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 31px;
+}
+.container .loader .loader__animation
+{
+	height: 6px;
+	background-color: #F2F2F2;
+	width: 100%;
+	border-radius: 8px;
+	position: relative;
+	overflow: hidden;
+}
+.container .loader .loader__animation .loader__animation__snake
+{
+	width: 100px;
+	height: 100%;
+	display: block;
+	background-color: #2F80ED;
+	position: absolute;
+	top: 0px;
+	border-radius: 8px;
+	transition: 0.4s;
+	animation: 2s snake ease-in-out infinite;
+}
+/* -- animations -- */
+@keyframes snake
+{
+	from
+	{
+		left: -110px;
+	}
+	to 
+	{
+		left: 340px;
+	}
+}
+
+/* -- responsive -- */
+@media screen and (max-width: 402px)
+{
+	.container
+	{
+		width: 100%;
+	}
+}
+@media screen and (max-height: 521px)
+{
+	.container
+	{
+		transform: none;
+		top: 0;
+		left: 0;
+		position: static;
+		margin: 0px auto;
+	}
+}
